@@ -1,0 +1,16 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Analysis Result</title>
+</head>
+<body>
+    <h1>Analysis Result</h1>
+    <h2>Data Summary</h2>
+    {{ tables|safe }}
+    <h2>Data Visualizations</h2>
+    {% for visualization in visualizations %}
+        <img src="{{ visualization }}" alt="Visualization">
+    {% endfor %}
+    <a href="/">Upload another file</a>
+</body>
+</html>
